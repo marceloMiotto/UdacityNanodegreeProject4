@@ -1,1 +1,1 @@
-include ':app', ':miottojoker', ':miottojoker2'
+include ':app', ':miottojoker', ':miottojoker2', ':joker'
