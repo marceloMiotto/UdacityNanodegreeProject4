@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MakeItBigger.iml" filepath="$PROJECT_DIR$/MakeItBigger.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/joker/miottojoker3.iml" filepath="$PROJECT_DIR$/joker/miottojoker3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/miottojoker/miottojoker.iml" filepath="$PROJECT_DIR$/miottojoker/miottojoker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/miottojoker2/miottojoker2.iml" filepath="$PROJECT_DIR$/miottojoker2/miottojoker2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/joker/joker.iml" filepath="$PROJECT_DIR$/joker/joker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jokerBackend/jokerBackend.iml" filepath="$PROJECT_DIR$/jokerBackend/jokerBackend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jokerdisplay/jokerdisplay.iml" filepath="$PROJECT_DIR$/jokerdisplay/jokerdisplay.iml" />
     </modules>
   </component>
 </project>
