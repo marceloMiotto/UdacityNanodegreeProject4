@@ -18,7 +18,6 @@ public  class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     @Override
     protected String doInBackground(Context... params) {
 
-
             /*
 
             if(myApiService == null) {  // Only do this once
@@ -41,11 +40,13 @@ public  class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
                 myApiService = builder.build();
             }
 */
-        context = params[0];
+        if(params.length > 0) {
+            context = params[0];
+        }
+
         if(mListener != null) {
             mListener.onComplete("test");
         }
-
 
         //try {
         // return myApiService.sayHi(name).execute().getData();
@@ -57,7 +58,7 @@ public  class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        // Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+
         if(context != null) {
             Intent intent = new Intent(context, JokerDisplayActivity.class);
             intent.putExtra(Constant.JOKER_CONTENT, result);
