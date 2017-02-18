@@ -1,6 +1,7 @@
 <resources>
     <string name="instructions">Press the button for delicious joke!</string>
     <string name="button_text">Tell Joke</string>
+    <string name="app_name">Joker</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

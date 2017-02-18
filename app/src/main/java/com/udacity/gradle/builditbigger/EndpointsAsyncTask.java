@@ -3,6 +3,8 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.example.marcelo_miotto.myapplication.backend.myApi.MyApi;
 
@@ -14,6 +16,21 @@ public  class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     private MyApi myApiService = null;
     private Context context;
     private GetTaskListener mListener = null;
+    ProgressBar progressBar;
+
+    public EndpointsAsyncTask(){}
+
+    public EndpointsAsyncTask(View rootView){
+
+        progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+    }
+
 
     @Override
     protected String doInBackground(Context... params) {
@@ -48,6 +65,12 @@ public  class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
             mListener.onComplete("test");
         }
 
+        //TODO remove only to test
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         //try {
         // return myApiService.sayHi(name).execute().getData();
         return "joke generated. ";
@@ -63,7 +86,9 @@ public  class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
             Intent intent = new Intent(context, JokerDisplayActivity.class);
             intent.putExtra(Constant.JOKER_CONTENT, result);
             context.startActivity(intent);
+            progressBar.setVisibility(View.GONE);
         }
+
     }
 
     public EndpointsAsyncTask setListener(GetTaskListener listener) {
