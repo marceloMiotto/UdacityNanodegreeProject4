@@ -8,7 +8,7 @@ public class MyJokerResource {
 
         MyJokerService myJokerService = new MyJokerService();
 
-        int randomJoke = (int) (Math.random() * 3);;
+        int randomJoke = (int) (Math.random() * 3);
         return myJokerService.getJoke(randomJoke);
 
     }

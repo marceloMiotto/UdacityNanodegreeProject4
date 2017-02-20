@@ -6,6 +6,8 @@ public class MyJokerModel {
     private String joke;
     private String author;
 
+    public MyJokerModel(){}
+
     public MyJokerModel(String joke, String author) {
         this.joke = joke;
         this.author = author;
